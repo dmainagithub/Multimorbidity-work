@@ -10,4 +10,7 @@ Steps:
 3. Scenario TWO (Updating a project to github)
 	a. git commit -am "third commit"
 	b. git push origin main 
-4.
+4. I can also do the following
+	a. git commit -m "My New Change"
+	b. git push origin main 
+
