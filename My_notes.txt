@@ -8,5 +8,6 @@ Steps:
 	d. git remote add https://github.com/dmainagithub/Multimorbidity-work.git
 	e. git push origin main
 3. Scenario TWO (Updating a project to github)
-	a. git push origin main 
+	a. git commit -am "third commit"
+	b. git push origin main 
 4.
