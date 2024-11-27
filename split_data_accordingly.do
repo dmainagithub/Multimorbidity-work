@@ -6,9 +6,9 @@ list diagnoses if strpos(diagnoses, "/") > 0 & diagnoses != "C/S"
 // Sort by patientid and visitdate (this will help pick unique records)
 // --------------------------------------------------------------------------------
 sort patientid visitdate
-br patientid visitdate diagnoses * if strpos(diagnoses, "/") > 0 | strpos(diagnoses, " AND ") > 0
-// Helps you see multiple diagnoses
-tab diagnoses if (strpos(diagnoses, "/") > 0 & diagnoses != "C/S") | strpos(diagnoses, " AND ") > 0  | strpos(diagnoses, " & ") > 0 | strpos(diagnoses, " 2 ") > 0
+// br patientid visitdate diagnoses * if strpos(diagnoses, "/") > 0 | strpos(diagnoses, " AND ") > 0
+// // Helps you see multiple diagnoses
+// tab diagnoses if (strpos(diagnoses, "/") > 0 & diagnoses != "C/S") | strpos(diagnoses, " AND ") > 0  | strpos(diagnoses, " & ") > 0 | strpos(diagnoses, " 2 ") > 0
 // --------------------------------------------------------------------------------
 // Real processing of the diagnoses column
 // --------------------------------------------------------------------------------
@@ -36,8 +36,6 @@ replace diagnoses_ii = subinstr(diagnoses_ii, "SOFT TISSUE INJURY /20 ASSAULT", 
 replace diagnoses_ii = subinstr(diagnoses_ii, "ST1 2 ASSAULT", "STI 2 ASSAULT", .)
 
 
-
-
 replace diagnoses_ii = subinstr(diagnoses_ii, "C/S", "Caesarean Section", .)
 replace diagnoses_ii = subinstr(diagnoses_ii, "HTN", "Hypertension", .)
 replace diagnoses_ii = subinstr(diagnoses_ii, "/GE", "/Gastroenteritis", .)
@@ -60,7 +58,7 @@ replace diag_1 = diag1
 replace diag_2 = diag2
 replace diag_3 = diag3
 // replace diag_4 = diag4
-br diagnoses diagnoses_ii diag1 diag2 diag3 if (strpos(diagnoses, "/") > 0 & diagnoses != "C/S") | strpos(diagnoses, " AND ") > 0  | strpos(diagnoses, " & ") > 0 | strpos(diagnoses, " 2 ") > 0
+// br diagnoses diagnoses_ii diag1 diag2 diag3 if (strpos(diagnoses, "/") > 0 & diagnoses != "C/S") | strpos(diagnoses, " AND ") > 0  | strpos(diagnoses, " & ") > 0 | strpos(diagnoses, " 2 ") > 0
 
 sort diagnoses_ii
 // --------------------------------------------------------------------------------
