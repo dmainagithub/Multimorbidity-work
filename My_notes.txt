@@ -1,0 +1,12 @@
+Steps:
+1. Shift + Right Click
+2. Select "Open in Terminal" OR on the address bar type "cmd"
+3. Scenario ONE (Adding a project to github)
+	a. git init
+	b. git add OR git add file.txt => to add a single file
+	c. git commit -am "initial commit"
+	d. git remote add https://github.com/dmainagithub/Multimorbidity-work.git
+	e. git push origin main
+3. Scenario TWO (Updating a project to github)
+	a. git push origin main 
+4.
