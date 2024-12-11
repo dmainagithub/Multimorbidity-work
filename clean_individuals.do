@@ -27,6 +27,7 @@ replace healthfacility = regexr(healthfacility, "Korogocho Health Centre", "7")
 // ------------------------------------------------------------------------------
 replace healthfacility="REUBEN HEALTH CENTRE GOK"  if regexm( employer , "GOK|G.O.K|G.O,K")
 replace healthfacility="REUBEN HEALTH CENTRE FBO"  if regexm( employer , "FBO")
+replace healthfacility="REUBEN HEALTH CENTRE FBO" if employer=="REUBEN HEALTH CENTRE" | employer=="RUBEN HEALTH CENTRE" | employer=="RUBEN HEATH CENTRE" | employer=="RUBEN HELATH CENTRE"  | employer=="MUKURU KWA REUBEN" | employer=="MUKURU KWA RUBEN" | employer=="ERUBEN HEALTH CENTRE"
 // ------------------------------------------------------------------------------
 // KWARE (10)
 // tab employer if regexm( employer , "KWARE")
@@ -42,7 +43,6 @@ replace healthfacility = regexr(healthfacility, "REUBEN HEALTH CENTRE GOK", "8")
 replace healthfacility = regexr(healthfacility, "REUBEN HEALTH CENTRE FBO", "9")
 replace healthfacility = regexr(healthfacility, "KWARE DISPENSARY", "10")
 replace healthfacility = regexr(healthfacility, "NJENGA LEVEL 4 HOSPITAL", "11")
-
 // ------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------
 // Define labels
